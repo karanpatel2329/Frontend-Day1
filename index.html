@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .container {
+        background-color: blueviolet;
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        margin-top: 20vh;
+        border-radius: 15px;
+      }
+      body {
+        background-color: hsl(233, 47%, 7%);
+        
+      }
+      .card {
+        display: flex;
+        background-color: hsl(244, 38%, 16%);
+        max-height: 60vh;
+      }
+     
+      .img {
+        background-image: url("images/image-header-desktop.jpg");
+        background-size: cover;
+        width: 40vw;
+      }
+      .img::before {
+        content: "";
+        display: block;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(221, 0, 250, 0.3);
+      }
+      .text {
+        height: 60vh;
+        padding: 15px;
+        color: white;
+        font-family: "Inter";
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .text p {
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+      .purple-text {
+        color: hsl(277, 64%, 61%);
+      }
+      .lower {
+        display: flex;
+      }
+      .inner {
+        flex: 30%;
+      }
+      @media (max-width:640px) {
+        body{
+          background-color: aliceblue;
+          height: 100vh !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .card{
+          flex-direction: column-reverse;
+          max-height: 90vh;
+        }
+        .container{
+          margin: auto;
+        }
+        .img{
+          height: 30vh;
+          width: 100vw;
+        }
+        .img::before {
+        content: "";
+        display: block;
+        position: relative;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(221, 0, 250, 0.3);
+      }
+      .text{
+        height: 60vh;
+        text-align: center;
+        justify-content: space-evenly;
+      }
+      .text p{
+        font-size: 17px;
+      }
+      .lower{
+        flex-direction: column;
+      }
+        
+      }
+      @media (max-width:768px) and (min-width:640px) {  
+        body{
+          background-color: black;
+        }
+        .text{
+          width: 60vw;
+          height: 40vh;
+        }
+      @media (min-width:768px){
+        body{
+          background-color: aqua;
+        }
+        .text{
+          height: 80vh;
+        }
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="text">
+          <h1>
+            Get <span class="purple-text">insights</span> that help your
+            business grow.
+          </h1>
+          <p>
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="lower">
+            <div class="inner">
+              <h2>10k+</h2>
+              <p>companies</p>
+            </div>
+            <div class="inner">
+              <h2>314</h2>
+              <p>templates</p>
+            </div>
+            <div class="inner">
+              <h2>12m+</h2>
+              <p>queries</p>
+            </div>
+          </div>
+        </div>
+        <div class="img">
+          <img class="back"  />
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
